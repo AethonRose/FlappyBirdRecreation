@@ -34,12 +34,13 @@ public class PrefabSpawner : MonoBehaviour
         nextSpawnTime = Time.time + spawnDelay;
 
         GameObject pipe = ObjectPooler.Instance.GetPooledObject();
+
         if (pipe != null)
         {
-            //pipe.transform.position = new Vector2(_prefabSpawner.transform.position.x, Random.Range(minY, maxY));
             pipe.transform.position = SetPrefabSpawnLocation(_prefabSpawner, minY, maxY);
             pipe.SetActive(true);
         }
+        
     }
 
     private Vector2 SetPrefabSpawnLocation(GameObject spawner, float minY, float maxY)

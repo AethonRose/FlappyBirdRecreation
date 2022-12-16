@@ -16,6 +16,7 @@ public class ScoreManager : MonoBehaviour
 
     #endregion singleton
 
+
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highScoreText;
 
@@ -43,5 +44,10 @@ public class ScoreManager : MonoBehaviour
         }
 
         highScoreText.SetText(highScore.ToString());
+    }
+
+    public void PlayScoreSound()
+    {
+        GetComponent<AudioSource>().Play();
     }
 }

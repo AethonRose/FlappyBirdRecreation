@@ -80,5 +80,10 @@ public class GameManager : MonoBehaviour
         gameOverImage.gameObject.SetActive(true);
     }
 
+    public void PlayLoseSound()
+    {
+        GetComponent<AudioSource>().Play();
+    }
+
     
 }
